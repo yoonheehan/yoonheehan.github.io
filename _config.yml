@@ -1,8 +1,8 @@
-title: Moonwalk
+title: 홍길동
 author: Abhinav Saxena
 url: https://www.abhinavsaxena.com/moonwalk # root address of the site
-description: > # description of the site (multiple lines allowed)
-  Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
+description: 
+  안녕하세요, 저는 웹 개발자 홍길동입니다. 프론트엔드와 백엔드 모두 다루는 풀스택 개발자로, 5년 이상의 경력을 가지고 있습니다. React와 Node.js를 주로 사용하며, 성능 최적화와 사용자 경험을 최우선으로 생각합니다. 새로운 기술을 배우고 적용하는 것을 즐기며, 팀워크와 커뮤니케이션을 중요하게 여깁니다. 항상 더 나은 솔루션을 찾기 위해 노력하며, 문제 해결에 열정이 있습니다.
 
 permalink: /:slug
 
@@ -21,6 +21,9 @@ logging:
 collections:
   test:
     output: true
+    permalink: /test/:path/
+  series:
+    output: true
 
 theme_config:
   appearance: "dark" # can be "light", "dark" or "auto"
@@ -34,13 +37,16 @@ theme_config:
   # following keys are using to create home layout
   show_projects: true # show projects as cards, add in _data/home.yml
   show_blog: true # show blog posts added in _posts
+  show_series: true
+  show_posts: true
   show_old_projects: true # show old projects as cards, add in _data/home.yml
   show_misc_list: true # show generic vertical list for misc details, add _data/home.yml
   show_reading_time: true # show number of words and reading time in the blog posts
   show_tags: true # show tags in a blog posts
   # options for "home" page
   home:
-    title_projects: Portfolio
+    title_post_series: Post Series
+    title_pojects: Projects
     title_misc_list: Details
     title_blog: Blog
     title_old_projects: Old Projects

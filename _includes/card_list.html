@@ -1,15 +1,9 @@
 <ul class="horizontal-list">
-  {% for item in include.collection %}
-
+  {% for item in include.collection | limit: 6 %}
     <li class="card">
       <a href="{{ item.url }}">
         <span class="header">
           {{ item.title }}
-
-          {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
-          {% endif %}
-
         </span>
 
         <hr />
@@ -19,8 +13,20 @@
           {{ item.desc }}
         </p>
         {% endif %}
+
+        {% if item.tags %}
+        <div class="tags">
+          {% for tag in item.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
       </a>
     </li>
-
   {% endfor %}
 </ul>
+<div class="next-button-section">
+  <a href="#" class="next-button">
+    ...Next
+  </a>
+</div>

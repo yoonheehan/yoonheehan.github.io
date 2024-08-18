@@ -21,26 +21,68 @@ ul.horizontal-list {
   padding: 1em;
   border: 1px var(--text) solid;
   width: 11em;
-  height: auto;
-  text-align: center;
+  height: 100%;
+  text-align: start;
   font-size: 1em;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color: #7291ff;
   margin-bottom: 0.8em;
   border-radius: 0.5em;
 
   .header {
-    color: var(--links);
+    color: black;
+    font-weight: 600;
   }
 
+  // 카드 description 길이 조절하려면 webkit-line-clamp와 line-clamp둘다 같은값으로 수정 필요
   .body {
     font-size: 0.8em;
+    min-height: 76px;
+    color: black;
+    font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 4; /* Webkit 기반 브라우저 (크롬, 사파리) */
+    line-clamp: 4; /* 표준 속성 */
+    height: auto; /* 고정 높이 제거 */
+    line-height: 1.5em; /* 줄 간격 설정 */
   }
 
   hr {
-    margin: 0.5em 0;
+    margin: 0.5px 0;
+    border: 1px solid;
+    color: black;
   }
 
+  .tags {
+    margin-top: 10px;
+  }
+
+  .tag {
+      background-color: black;
+      border-radius: 5px;
+      padding: 0px 5px;
+      margin-right: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #00ff99;
+      display: inline-block;
+  }
+}
+
+.next-button-section{
+  text-align: end;
+}
+
+.next-button {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 /* Responsive cards - one column layout on small screens */

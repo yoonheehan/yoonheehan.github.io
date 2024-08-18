@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+
+<header>
+  {% if site.theme_config.show_navbar == true %}
+    {% include nav.html collection=site.data.home.navbar_entries %}
+
+    <div class="page-title">Post Series</div>
+    <div class="dashed"></div>
+  {% endif %}
+</header>
+
+
+<ul>
+  {% for series in site.data.series %}
+    <li>
+      <a href="{{ series.url }}">{{ series.title }}</a>
+      <div>{{series.description}}</div>
+    </li>
+  {% endfor %}
+</ul>
+
+
+{% if site.theme_config.show_footer == true %}
+  <footer>
+    <div class="dashed"></div>
+    {% include footer.html collection=site.data.home.footer_entries %}
+  </footer>
+{% endif %}
+
+

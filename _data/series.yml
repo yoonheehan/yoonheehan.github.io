@@ -1,0 +1,23 @@
+- title: "Series One"
+  url: "/series/series-one"
+  description: "This is a series one."
+
+- title: "Series Two"
+  url: "/series/series-two"   
+  description: "This is a series two."
+
+- title: "Series Three"
+  url: "/series/series-three"
+  description: "This is a series three."
+
+- title: "Series Four"
+  url: "/series/series-four"   
+  description: "This is a series four."
+
+- title: "Series Five"
+  url: "/series/series-five"
+  description: "This is a series five."
+
+- title: "Series Six"
+  url: "/series/series-six"   
+  description: "This is a series six."
